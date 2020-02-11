@@ -30,7 +30,7 @@ function App() {
           </div>
           <div className="history">
             <div>2019.09 ~ 2019.12</div>
-            <div>CodeStates Immersive 15th 수료</div>
+            <div>부트캠프 CodeStates Immersive 15th 수료</div>
           </div>
           <div className="section body">
             <Skills />
