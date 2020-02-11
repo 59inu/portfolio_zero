@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ======
 
-[배포링크](http://portfolio-59inu.s3-website.ap-northeast-2.amazonaws.com/)
+[배포 링크](http://portfolio-59inu.s3-website.ap-northeast-2.amazonaws.com/)
