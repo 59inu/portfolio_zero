@@ -52,6 +52,56 @@ export const projects = {
       }
     ]
   },
+  "NEWS-CLIPPER": {
+    period: "2019.2 ~  2019.2",
+    skill: [stack.js, stack.ra, stack.rn, stack.rd],
+    position: "BACK-END / TEAM LEADER",
+    description: {
+      concept: ["첫 번째 프로젝트", "냉장고 재고관리 웹어플리케이션"],
+      stack:
+        "Node.js, Express, JWT, Mysql, Sequelize, AWS EC2/RDS, React, React-router",
+      link: {
+        slide: "https://slides.com/bangsil/deck-3",
+        Github: "https://github.com/59inu/_foodo/"
+      },
+      roll: [
+        "유저의 식재료 재고 데이터와 메뉴별 재료의 일치 여부에 따라 메뉴를 추천하는 DB Schema 및 프로세스 공동설계",
+        "JWT 방식의 권한 인증과 토큰 관리",
+        "회원가입/로그인/로그아웃 구현",
+        "AWS/ RDS와 EC2를 통한 서버 및 DB 구축과 배포"
+      ]
+    },
+    blog: {
+      title: "React 그리고 Team, Team Leader?? — 냉장고 관리 웹앱 Foodo",
+      uri:
+        "https://medium.com/59inu/%EC%B2%AB-%EB%B2%88%EC%A7%B8-project-%ED%9A%8C%EA%B3%A0-888f390e31d5"
+    },
+    img: [
+      {
+        source: require("./Assets/image/foodo/foodo.png"),
+        txt: "냉장고 열지 않고 냉장고 속을 파악하기"
+      },
+      {
+        source: require("./Assets/image/foodo/new.png"),
+        txt:
+          "새로운 식재료를 등록할 수 있습니다. 자동 완성 기능을 통해 서버에 등록된 식재료의 이름을 쉽게 검색할 수 있습니다."
+      },
+      {
+        source: require("./Assets/image/foodo/list.png"),
+        txt:
+          "식재료 재고 현황의 목록을 확인하고 남은 수량을 수정할 수 있습니다."
+      },
+      {
+        source: require("./Assets/image/foodo/chart.png"),
+        txt: "현재 재고의 양과 신선도를 차트로 한 눈에 파악할 수 있습니다."
+      },
+      {
+        source: require("./Assets/image/foodo/recipe.png"),
+        txt:
+          "현재 유저의 재고를 바탕으로 재료가 일치하는 메뉴를 추천하여, 해당 메뉴의 레시피 영상을 보여줍니다."
+      }
+    ]
+  },
   MEMON: {
     period: "2019.11 ~ 2019.12",
     skill: [stack.js, stack.rn, stack.ra, stack.ts],

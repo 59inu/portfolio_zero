@@ -130,7 +130,7 @@ a[data]:hover:after {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
-  background-color: #f8d7d7;
+  background-color: #fff;
   align-items: center;
   justify-content: center;
   border: 10 solid black;
