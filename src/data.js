@@ -55,50 +55,38 @@ export const projects = {
   "NEWS-CLIPPER": {
     period: "2019.2 ~  2019.2",
     skill: [stack.js, stack.ra, stack.rn, stack.rd],
-    position: "BACK-END / TEAM LEADER",
+    position: "FRONT-END / 개인 작업",
     description: {
-      concept: ["첫 번째 프로젝트", "냉장고 재고관리 웹어플리케이션"],
+      concept: ["뉴스 검색 및 스크래핑", "오픈 API 모바일 어플"],
       stack:
-        "Node.js, Express, JWT, Mysql, Sequelize, AWS EC2/RDS, React, React-router",
+        "Rreact-Native, Redux, Redux-thunk, React-navigation, AsyncStorage, OpenAPI",
       link: {
-        slide: "https://slides.com/bangsil/deck-3",
         Github: "https://github.com/59inu/_foodo/"
       },
       roll: [
-        "유저의 식재료 재고 데이터와 메뉴별 재료의 일치 여부에 따라 메뉴를 추천하는 DB Schema 및 프로세스 공동설계",
-        "JWT 방식의 권한 인증과 토큰 관리",
-        "회원가입/로그인/로그아웃 구현",
-        "AWS/ RDS와 EC2를 통한 서버 및 DB 구축과 배포"
+        "naver/google/NYT open API 를 통한 뉴스 검색 구현",
+        "화면 스크롤 범위에 따른 업스크롤 버튼 출력과 무한스크롤 구현",
+        "AsyncStorage를 이용한 데이터 저장 기능"
       ]
     },
     blog: {
-      title: "React 그리고 Team, Team Leader?? — 냉장고 관리 웹앱 Foodo",
-      uri:
-        "https://medium.com/59inu/%EC%B2%AB-%EB%B2%88%EC%A7%B8-project-%ED%9A%8C%EA%B3%A0-888f390e31d5"
+      title: "작성 중",
+      uri: ""
     },
     img: [
       {
-        source: require("./Assets/image/foodo/foodo.png"),
-        txt: "냉장고 열지 않고 냉장고 속을 파악하기"
+        source: require("./Assets/image/newsclipper/source.png"),
+        txt: "검색엔진 및 미디어를 선택하여 뉴스를 검색할 수 있습니다."
       },
       {
-        source: require("./Assets/image/foodo/new.png"),
+        source: require("./Assets/image/newsclipper/search.png"),
         txt:
-          "새로운 식재료를 등록할 수 있습니다. 자동 완성 기능을 통해 서버에 등록된 식재료의 이름을 쉽게 검색할 수 있습니다."
+          "화면의 스크롤 범위에 따라 upScroll 버튼이 나타나며, 추가 콘텐츠를 로딩하는 무한스크롤 기능이 구현되어 있습니다."
       },
       {
-        source: require("./Assets/image/foodo/list.png"),
+        source: require("./Assets/image/newsclipper/myClip.png"),
         txt:
-          "식재료 재고 현황의 목록을 확인하고 남은 수량을 수정할 수 있습니다."
-      },
-      {
-        source: require("./Assets/image/foodo/chart.png"),
-        txt: "현재 재고의 양과 신선도를 차트로 한 눈에 파악할 수 있습니다."
-      },
-      {
-        source: require("./Assets/image/foodo/recipe.png"),
-        txt:
-          "현재 유저의 재고를 바탕으로 재료가 일치하는 메뉴를 추천하여, 해당 메뉴의 레시피 영상을 보여줍니다."
+          "검색한 기사를 클립하거나 취소할 수 있으며 앱을 종료해도 클립 데이터는 유지됩니다."
       }
     ]
   },
