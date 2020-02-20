@@ -1,9 +1,9 @@
 import React from "react";
 import { skills } from "../data";
 import { connect } from "react-redux";
-import { markProject, unmark } from "../redux/mark";
+import { actions } from "../redux/mark";
 
-const Skills = ({ style, markProject, unmark }) => {
+const Skills = ({ style, markSkill, unmark }) => {
   return (
     <div className="subsection">
       <h3>Skill</h3>
@@ -14,7 +14,7 @@ const Skills = ({ style, markProject, unmark }) => {
               key={i}
               className={style.skill[skill]}
               onMouseOver={e => {
-                markProject(e.target.textContent);
+                markSkill(e.target.textContent);
               }}
               onMouseLeave={unmark}
             >
@@ -29,8 +29,8 @@ const Skills = ({ style, markProject, unmark }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    markProject: skill => dispatch(markProject(skill)),
-    unmark: () => dispatch(unmark())
+    markSkill: skill => dispatch(actions.project.skill(skill)),
+    unmark: () => dispatch(actions.project.unmark())
   };
 };
 const mapStateToProps = state => {

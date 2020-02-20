@@ -47,7 +47,10 @@
 }
 
 #header {
+  position: fixed;
+  width: 80%;
   height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
@@ -124,11 +127,13 @@ a[data]:hover:after {
 }
 
 #body {
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #f8d7d7;
   align-items: center;
   justify-content: center;
+  border: 10 solid black;
 }
 .section {
   margin: 50px 0 0 0;

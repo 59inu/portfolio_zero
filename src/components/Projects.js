@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProjectPre from "./ProjectPre";
 import { projects } from "../data";
-import { markSkill, unmark } from "../redux/mark";
+import { actions } from "../redux/mark";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,7 +9,7 @@ import {
   faChevronRight,
   faLink
 } from "@fortawesome/free-solid-svg-icons";
-const Projects = ({ style, focus, markSkill, unmark }) => {
+const Projects = ({ style, focus, markProject, unmark }) => {
   const [page, setPage] = useState(0);
   const [project, setProject] = useState("WALKWITH");
   return (
@@ -30,7 +30,7 @@ const Projects = ({ style, focus, markSkill, unmark }) => {
               className={`project ${style[p]}`}
               key={i}
               onMouseOver={() => {
-                markSkill(p);
+                markProject(p);
                 setPage(0);
                 setProject(p);
               }}
@@ -109,8 +109,8 @@ const Projects = ({ style, focus, markSkill, unmark }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    markSkill: p => dispatch(markSkill(p)),
-    unmark: () => dispatch(unmark())
+    markProject: p => dispatch(actions.project.project(p)),
+    unmark: () => dispatch(actions.project.unmark())
   };
 };
 const mapStateToProps = state => {

@@ -1,4 +1,4 @@
-import { handleActions, createAction } from "redux-actions";
+import { handleActions, createActions } from "redux-actions";
 import { skills, projects } from "../data";
 
 const skillStyle = "skill-tag";
@@ -6,13 +6,13 @@ const pjUnmarkStyle = "project-unmark";
 const pjMarkStyle = "project-mark";
 const mark = "mark";
 
-const MARK_SKILL = "MARK_SKILL";
-const MARK_PROJECT = "MARK_PROJECT";
-const UNMARK = "UNMARK";
-
-export const markSkill = createAction(MARK_SKILL);
-export const markProject = createAction(MARK_PROJECT);
-export const unmark = createAction(UNMARK);
+export const actions = createActions({
+  PROJECT: {
+    SKILL: skill => skill,
+    PROJECT: project => project,
+    UNMARK: () => {}
+  }
+});
 
 const initialState = {
   focusProject: "",
@@ -25,17 +25,14 @@ skills.forEach(s => {
 for (let key in projects) {
   initialState.project[key] = pjUnmarkStyle;
 }
-console.log(initialState);
 
 export default handleActions(
   {
-    [MARK_SKILL]: (state, action) => {
-      //action의 페이로드는 프로젝트타이틀
+    "PROJECT/PROJECT": (state, action) => {
       const newSkillState = { ...initialState.skill };
       const newPJState = { ...initialState.project };
       const project = action.payload;
       const pSkill = projects[project].skill;
-      console.log(newSkillState);
       for (let key in newSkillState) {
         if (pSkill.indexOf(key) >= 0) {
           newSkillState[key] = `${skillStyle} ${mark}`;
@@ -49,13 +46,13 @@ export default handleActions(
         focusProject: action.payload
       };
     },
-    [UNMARK]: (state, action) => {
+    "PROJECT/UNMARK": (state, action) => {
       return {
         ...initialState,
         focusProject: ""
       };
     },
-    [MARK_PROJECT]: (state, action) => {
+    "PROJECT/SKILL": (state, action) => {
       const newPJState = { ...state.project };
       const skill = action.payload;
       for (let key in newPJState) {
