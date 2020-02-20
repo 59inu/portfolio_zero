@@ -60,9 +60,7 @@ export const projects = {
       concept: ["뉴스 검색 및 스크래핑", "오픈 API 모바일 어플"],
       stack:
         "Rreact-Native, Redux, Redux-thunk, React-navigation, AsyncStorage, OpenAPI",
-      link: {
-        Github: "https://github.com/59inu/_foodo/"
-      },
+      link: {},
       roll: [
         "naver/google/NYT open API 를 통한 뉴스 검색 구현",
         "화면 스크롤 범위에 따른 업스크롤 버튼 출력과 무한스크롤 구현",
