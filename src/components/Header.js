@@ -3,9 +3,7 @@ import Links from "./Links";
 import { faIdBadge } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { connect } from "react-redux";
-
-const Header = ({ temp }) => {
+const Header = () => {
   return (
     <header id="header">
       <a
@@ -21,7 +19,4 @@ const Header = ({ temp }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  temp: state.header.temp
-});
-export default connect(mapStateToProps, null)(Header);
+export default Header;

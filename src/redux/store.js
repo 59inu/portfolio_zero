@@ -1,10 +1,8 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import mark from "./mark";
-import header from "./header";
 import thunk from "redux-thunk";
 const rootReducer = combineReducers({
-  mark,
-  header
+  mark
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
