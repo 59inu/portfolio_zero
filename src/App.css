@@ -1,34 +1,3 @@
-@font-face {
-  font-family: "NotoSansKR";
-  font-weight: 100;
-  src: url("./Assets/Fonts/NotoSansCJKkr-Thin.otf");
-}
-@font-face {
-  font-family: "NotoSansKR";
-  font-weight: 200;
-  src: url("./Assets/Fonts/NotoSansCJKkr-Light.otf");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-weight: 400;
-  src: url("./Assets/Fonts/NotoSansCJKkr-Regular.otf");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-weight: 500;
-  src: url("./Assets/Fonts/NotoSansCJKkr-Medium.otf");
-}
-@media screen and (min-width: 769px) {
-  .project-screen {
-    height: 350px;
-    display: flex;
-  }
-  .subsection {
-    padding: 20px;
-  }
-}
 @media (max-width: 768px) {
   .project-screen {
     height: auto;
@@ -43,7 +12,7 @@
   margin: 0 10% 0 10%;
   text-align: center;
   color: slategray;
-  font-family: "NotoSansKR";
+  font-family: "Noto Sans KR";
 }
 
 #header {
